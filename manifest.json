@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "SenderCheck",
+    "version": "1.0",
+    "description": "Checks whether the email sender is trusted or not",
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "css": [
+                "./dist/css/bootstrap.css"
+            ],
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://outlook.live.com/*"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "hello.html"
+    }
+}
