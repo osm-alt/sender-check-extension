@@ -20,7 +20,7 @@ function handle_outlook(sender_box) {
   var status_badge = document.createElement("div");
   status_badge.className = "bootstrap-badge bootstrap-text-bg-primary";
   status_badge.style.width = "1em";
-  status_badge.innerText = "Trusted";
+  status_badge.innerText = "SenderCheck Status: Trusted";
   add_badge = createObserver("AvaBt", (someElement) => {
     someElement.appendChild(status_badge);
   });

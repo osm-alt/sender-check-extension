@@ -1978,7 +1978,7 @@ a > .bootstrap code {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-control {
+  .bootstrap .bootstrap-form-control {
     transition: none !important;
   }
 }
@@ -2046,11 +2046,11 @@ a > .bootstrap code {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-control::-webkit-file-upload-button {
+  .bootstrap .bootstrap-form-control::-webkit-file-upload-button {
     -webkit-transition: none !important;
     transition: none !important;
   }
-  .bootstrap .form-control::file-selector-button {
+  .bootstrap .bootstrap-form-control::file-selector-button {
     transition: none !important;
   }
 }
@@ -2074,7 +2074,7 @@ a > .bootstrap code {
 .bootstrap-form-control-plaintext:focus {
   outline: 0 !important;
 }
-.bootstrap-form-control-plaintext.form-control-sm, .bootstrap .form-control-plaintext.form-control-lg {
+.bootstrap-form-control-plaintext.bootstrap-form-control-sm, .bootstrap .bootstrap-form-control-plaintext.bootstrap-form-control-lg {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
@@ -2114,13 +2114,13 @@ a > .bootstrap code {
   -webkit-margin-end: 1rem !important;
   margin-inline-end: 1rem !important;
 }
-.bootstrap textarea.form-control {
+.bootstrap textarea.bootstrap-form-control {
   min-height: calc(1.5em + 0.75rem + calc(var(--bs-border-width) * 2)) !important;
 }
-.bootstrap textarea.form-control-sm {
+.bootstrap textarea.bootstrap-form-control-sm {
   min-height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2)) !important;
 }
-.bootstrap textarea.form-control-lg {
+.bootstrap textarea.bootstrap-form-control-lg {
   min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2)) !important;
 }
 .bootstrap-form-control-color {
@@ -2138,10 +2138,10 @@ a > .bootstrap code {
 .bootstrap-form-control-color::-webkit-color-swatch {
   border-radius: 0.375rem !important;
 }
-.bootstrap-form-control-color.form-control-sm {
+.bootstrap-form-control-color.bootstrap-form-control-sm {
   height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2)) !important;
 }
-.bootstrap-form-control-color.form-control-lg {
+.bootstrap-form-control-color.bootstrap-form-control-lg {
   height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2)) !important;
 }
 .bootstrap-form-select {
@@ -2167,7 +2167,7 @@ a > .bootstrap code {
   appearance: none !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-select {
+  .bootstrap .bootstrap-formselect {
     transition: none !important;
   }
 }
@@ -2176,7 +2176,7 @@ a > .bootstrap code {
   outline: 0 !important;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
 }
-.bootstrap-form-select[multiple], .bootstrap .form-select[size]:not([size="1"]) {
+.bootstrap-form-select[multiple], .bootstrap .bootstrap-formselect[size]:not([size="1"]) {
   padding-right: 0.75rem !important;
   background-image: none !important;
 }
@@ -2201,7 +2201,7 @@ a > .bootstrap code {
   font-size: 1.25rem !important;
   border-radius: 0.5rem !important;
 }
-.bootstrap [data-bs-theme=dark] .form-select {
+.bootstrap [data-bs-theme=dark] .bootstrap-formselect {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
 }
 .bootstrap-form-check {
@@ -2210,7 +2210,7 @@ a > .bootstrap code {
   padding-left: 1.5em !important;
   margin-bottom: 0.125rem !important;
 }
-.bootstrap-form-check .form-check-input {
+.bootstrap-form-check .bootstrap-formcheck-input {
   float: left !important;
   margin-left: -1.5em !important;
 }
@@ -2219,7 +2219,7 @@ a > .bootstrap code {
   padding-left: 0 !important;
   text-align: right !important;
 }
-.bootstrap-form-check-reverse .form-check-input {
+.bootstrap-form-check-reverse .bootstrap-formcheck-input {
   float: right !important;
   margin-right: -1.5em !important;
   margin-left: 0 !important;
@@ -2277,14 +2277,14 @@ a > .bootstrap code {
   filter: none !important;
   opacity: 0.5 !important;
 }
-.bootstrap-form-check-input[disabled] ~ .form-check-label, .bootstrap .form-check-input:disabled ~ .form-check-label {
+.bootstrap-form-check-input[disabled] ~ .bootstrap-formcheck-label, .bootstrap .bootstrap-formcheck-input:disabled ~ .bootstrap-formcheck-label {
   cursor: default !important;
   opacity: 0.5 !important;
 }
 .bootstrap-form-switch {
   padding-left: 2.5em !important;
 }
-.bootstrap-form-switch .form-check-input {
+.bootstrap-form-switch .bootstrap-formcheck-input {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e") !important;
   width: 2em !important;
   margin-left: -2.5em !important;
@@ -2294,22 +2294,22 @@ a > .bootstrap code {
   transition: background-position 0.15s ease-in-out !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-switch .form-check-input {
+  .bootstrap .bootstrap-formswitch .bootstrap-formcheck-input {
     transition: none !important;
   }
 }
-.bootstrap-form-switch .form-check-input:focus {
+.bootstrap-form-switch .bootstrap-formcheck-input:focus {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e") !important;
 }
-.bootstrap-form-switch .form-check-input:checked {
+.bootstrap-form-switch .bootstrap-formcheck-input:checked {
   background-position: right center !important;
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
 }
-.bootstrap-form-switch.form-check-reverse {
+.bootstrap-form-switch.bootstrap-formcheck-reverse {
   padding-right: 2.5em !important;
   padding-left: 0 !important;
 }
-.bootstrap-form-switch.form-check-reverse .form-check-input {
+.bootstrap-form-switch.bootstrap-formcheck-reverse .bootstrap-formcheck-input {
   margin-right: -2.5em !important;
   margin-left: 0 !important;
 }
@@ -2322,12 +2322,12 @@ a > .bootstrap code {
   clip: rect(0, 0, 0, 0) !important;
   pointer-events: none !important;
 }
-.bootstrap-btn-check[disabled] + .btn, .bootstrap .btn-check:disabled + .btn {
+.bootstrap-btn-check[disabled] + .bootstrap-btn, .bootstrap .bootstrap-btn-check:disabled + .bootstrap-btn {
   pointer-events: none !important;
   filter: none !important;
   opacity: 0.65 !important;
 }
-.bootstrap [data-bs-theme=dark] .form-switch .form-check-input:not(:checked):not(:focus) {
+.bootstrap [data-bs-theme=dark] .bootstrap-formswitch .bootstrap-formcheck-input:not(:checked):not(:focus) {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e") !important;
 }
 .bootstrap-form-range {
@@ -2364,7 +2364,7 @@ a > .bootstrap code {
   appearance: none !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-range::-webkit-slider-thumb {
+  .bootstrap .bootstrap-formrange::-webkit-slider-thumb {
     -webkit-transition: none !important;
     transition: none !important;
   }
@@ -2393,7 +2393,7 @@ a > .bootstrap code {
   appearance: none !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-range::-moz-range-thumb {
+  .bootstrap .bootstrap-formrange::-moz-range-thumb {
     -moz-transition: none !important;
     transition: none !important;
   }
@@ -2422,7 +2422,7 @@ a > .bootstrap code {
 .bootstrap-form-floating {
   position: relative !important;
 }
-.bootstrap-form-floating::before:not(.form-control:disabled) {
+.bootstrap-form-floating::before:not(.bootstrap-form-control:disabled) {
   position: absolute !important;
   top: var(--bs-border-width) !important;
   left: var(--bs-border-width) !important;
@@ -2432,9 +2432,9 @@ a > .bootstrap code {
   background-color: var(--bs-form-control-bg) !important;
   border-radius: 0.375rem !important;
 }
-.bootstrap-form-floating > .form-control,
-.bootstrap-form-floating > .form-control-plaintext,
-.bootstrap-form-floating > .form-select {
+.bootstrap-form-floating > .bootstrap-form-control,
+.bootstrap-form-floating > .bootstrap-form-control-plaintext,
+.bootstrap-form-floating > .bootstrap-form-select {
   height: calc(3.5rem + calc(var(--bs-border-width) * 2)) !important;
   line-height: 1.25 !important;
 }
@@ -2455,59 +2455,59 @@ a > .bootstrap code {
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .form-floating > label {
+  .bootstrap .bootstrap-form-floating > label {
     transition: none !important;
   }
 }
-.bootstrap-form-floating > .form-control,
-.bootstrap-form-floating > .form-control-plaintext {
+.bootstrap-form-floating > .bootstrap-form-control,
+.bootstrap-form-floating > .bootstrap-form-control-plaintext {
   padding: 1rem 0.75rem !important;
 }
-.bootstrap-form-floating > .form-control::-moz-placeholder, .bootstrap .form-floating > .form-control-plaintext::-moz-placeholder {
+.bootstrap-form-floating > .bootstrap-form-control::-moz-placeholder, .bootstrap .bootstrap-form-floating > .bootstrap-form-control-plaintext::-moz-placeholder {
   color: transparent !important;
 }
-.bootstrap-form-floating > .form-control::placeholder,
-.bootstrap-form-floating > .form-control-plaintext::placeholder {
+.bootstrap-form-floating > .bootstrap-form-control::placeholder,
+.bootstrap-form-floating > .bootstrap-form-control-plaintext::placeholder {
   color: transparent !important;
 }
-.bootstrap-form-floating > .form-control:not(:-moz-placeholder-shown), .bootstrap .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+.bootstrap-form-floating > .bootstrap-form-control:not(:-moz-placeholder-shown), .bootstrap .bootstrap-form-floating > .bootstrap-form-control-plaintext:not(:-moz-placeholder-shown) {
   padding-top: 1.625rem !important;
   padding-bottom: 0.625rem !important;
 }
-.bootstrap-form-floating > .form-control:focus, .bootstrap .form-floating > .form-control:not(:placeholder-shown),
-.bootstrap-form-floating > .form-control-plaintext:focus,
-.bootstrap-form-floating > .form-control-plaintext:not(:placeholder-shown) {
+.bootstrap-form-floating > .bootstrap-form-control:focus, .bootstrap .bootstrap-form-floating > .bootstrap-form-control:not(:placeholder-shown),
+.bootstrap-form-floating > .bootstrap-form-control-plaintext:focus,
+.bootstrap-form-floating > .bootstrap-form-control-plaintext:not(:placeholder-shown) {
   padding-top: 1.625rem !important;
   padding-bottom: 0.625rem !important;
 }
-.bootstrap-form-floating > .form-control:-webkit-autofill,
-.bootstrap-form-floating > .form-control-plaintext:-webkit-autofill {
+.bootstrap-form-floating > .bootstrap-form-control:-webkit-autofill,
+.bootstrap-form-floating > .bootstrap-form-control-plaintext:-webkit-autofill {
   padding-top: 1.625rem !important;
   padding-bottom: 0.625rem !important;
 }
-.bootstrap-form-floating > .form-select {
+.bootstrap-form-floating > .bootstrap-form-select {
   padding-top: 1.625rem !important;
   padding-bottom: 0.625rem !important;
 }
-.bootstrap-form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+.bootstrap-form-floating > .bootstrap-form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 0.65 !important;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
 }
-.bootstrap-form-floating > .form-control:focus ~ label,
-.bootstrap-form-floating > .form-control:not(:placeholder-shown) ~ label,
-.bootstrap-form-floating > .form-control-plaintext ~ label,
-.bootstrap-form-floating > .form-select ~ label {
+.bootstrap-form-floating > .bootstrap-form-control:focus ~ label,
+.bootstrap-form-floating > .bootstrap-form-control:not(:placeholder-shown) ~ label,
+.bootstrap-form-floating > .bootstrap-form-control-plaintext ~ label,
+.bootstrap-form-floating > .bootstrap-form-select ~ label {
   opacity: 0.65 !important;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
 }
-.bootstrap-form-floating > .form-control:-webkit-autofill ~ label {
+.bootstrap-form-floating > .bootstrap-form-control:-webkit-autofill ~ label {
   opacity: 0.65 !important;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
 }
-.bootstrap-form-floating > .form-control-plaintext ~ label {
+.bootstrap-form-floating > .bootstrap-form-control-plaintext ~ label {
   border-width: var(--bs-border-width) 0 !important;
 }
-.bootstrap-form-floating > .form-control:disabled ~ label {
+.bootstrap-form-floating > .bootstrap-form-control:disabled ~ label {
   color: #6c757d !important;
 }
 .bootstrap-input-group {
@@ -2517,24 +2517,24 @@ a > .bootstrap code {
   align-items: stretch !important;
   width: 100% !important;
 }
-.bootstrap-input-group > .form-control,
-.bootstrap-input-group > .form-select,
-.bootstrap-input-group > .form-floating {
+.bootstrap-input-group > .bootstrap-form-control,
+.bootstrap-input-group > .bootstrap-formselect,
+.bootstrap-input-group > .bootstrap-form-floating {
   position: relative !important;
   flex: 1 1 auto !important;
   width: 1% !important;
   min-width: 0 !important;
 }
-.bootstrap-input-group > .form-control:focus,
-.bootstrap-input-group > .form-select:focus,
-.bootstrap-input-group > .form-floating:focus-within {
+.bootstrap-input-group > .bootstrap-form-control:focus,
+.bootstrap-input-group > .bootstrap-formselect:focus,
+.bootstrap-input-group > .bootstrap-form-floating:focus-within {
   z-index: 5 !important;
 }
-.bootstrap-input-group .btn {
+.bootstrap-input-group .bootstrap-btn {
   position: relative !important;
   z-index: 2 !important;
 }
-.bootstrap-input-group .btn:focus {
+.bootstrap-input-group .bootstrap-btn:focus {
   z-index: 5 !important;
 }
 .bootstrap-input-group-text {
@@ -2551,37 +2551,37 @@ a > .bootstrap code {
   border: var(--bs-border-width) solid var(--bs-border-color) !important;
   border-radius: 0.375rem !important;
 }
-.bootstrap-input-group-lg > .form-control,
-.bootstrap-input-group-lg > .form-select,
+.bootstrap-input-group-lg > .bootstrap-form-control,
+.bootstrap-input-group-lg > .bootstrap-formselect,
 .bootstrap-input-group-lg > .input-group-text,
-.bootstrap-input-group-lg > .btn {
+.bootstrap-input-group-lg > .bootstrap-btn {
   padding: 0.5rem 1rem !important;
   font-size: 1.25rem !important;
   border-radius: 0.5rem !important;
 }
-.bootstrap-input-group-sm > .form-control,
-.bootstrap-input-group-sm > .form-select,
+.bootstrap-input-group-sm > .bootstrap-form-control,
+.bootstrap-input-group-sm > .bootstrap-formselect,
 .bootstrap-input-group-sm > .input-group-text,
-.bootstrap-input-group-sm > .btn {
+.bootstrap-input-group-sm > .bootstrap-btn {
   padding: 0.25rem 0.5rem !important;
   font-size: 0.875rem !important;
   border-radius: 0.25rem !important;
 }
-.bootstrap-input-group-lg > .form-select,
-.bootstrap-input-group-sm > .form-select {
+.bootstrap-input-group-lg > .bootstrap-formselect,
+.bootstrap-input-group-sm > .bootstrap-formselect {
   padding-right: 3rem !important;
 }
-.bootstrap-input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.bootstrap-input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.bootstrap-form-floating),
 .bootstrap-input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
-.bootstrap-input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
-.bootstrap-input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
+.bootstrap-input-group:not(.has-validation) > .bootstrap-form-floating:not(:last-child) > .bootstrap-form-control,
+.bootstrap-input-group:not(.has-validation) > .bootstrap-form-floating:not(:last-child) > .bootstrap-formselect {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
-.bootstrap-input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.bootstrap-input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.bootstrap-form-floating),
 .bootstrap-input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
-.bootstrap-input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
-.bootstrap-input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select {
+.bootstrap-input-group.has-validation > .bootstrap-form-floating:nth-last-child(n+3) > .bootstrap-form-control,
+.bootstrap-input-group.has-validation > .bootstrap-form-floating:nth-last-child(n+3) > .bootstrap-formselect {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
@@ -2590,8 +2590,8 @@ a > .bootstrap code {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
-.bootstrap-input-group > .form-floating:not(:first-child) > .form-control,
-.bootstrap-input-group > .form-floating:not(:first-child) > .form-select {
+.bootstrap-input-group > .bootstrap-form-floating:not(:first-child) > .bootstrap-form-control,
+.bootstrap-input-group > .bootstrap-form-floating:not(:first-child) > .bootstrap-formselect {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
@@ -2620,7 +2620,7 @@ a > .bootstrap code {
 .bootstrap.is-valid ~ .valid-tooltip {
   display: block !important;
 }
-.was-validated .bootstrap .form-control:valid, .bootstrap .form-control.is-valid {
+.was-validated .bootstrap .bootstrap-form-control:valid, .bootstrap .bootstrap-form-control.is-valid {
   border-color: var(--bs-success) !important;
   padding-right: calc(1.5em + 0.75rem) !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") !important;
@@ -2628,50 +2628,50 @@ a > .bootstrap code {
   background-position: right calc(0.375em + 0.1875rem) center !important;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
 }
-.was-validated .bootstrap .form-control:valid:focus, .bootstrap .form-control.is-valid:focus {
+.was-validated .bootstrap .bootstrap-form-control:valid:focus, .bootstrap .bootstrap-form-control.is-valid:focus {
   border-color: var(--bs-success) !important;
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25) !important;
 }
-.was-validated .bootstrap textarea.form-control:valid, .bootstrap textarea.form-control.is-valid {
+.was-validated .bootstrap textarea.bootstrap-form-control:valid, .bootstrap textarea.bootstrap-form-control.is-valid {
   padding-right: calc(1.5em + 0.75rem) !important;
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem) !important;
 }
-.was-validated .bootstrap .form-select:valid, .bootstrap .form-select.is-valid {
+.was-validated .bootstrap .bootstrap-formselect:valid, .bootstrap .bootstrap-formselect.is-valid {
   border-color: var(--bs-success) !important;
 }
-.was-validated .bootstrap .form-select:valid:not([multiple]):not([size]), .was-validated .bootstrap .form-select:valid:not([multiple])[size="1"], .bootstrap .form-select.is-valid:not([multiple]):not([size]), .bootstrap .form-select.is-valid:not([multiple])[size="1"] {
+.was-validated .bootstrap .bootstrap-formselect:valid:not([multiple]):not([size]), .was-validated .bootstrap .bootstrap-formselect:valid:not([multiple])[size="1"], .bootstrap .bootstrap-formselect.is-valid:not([multiple]):not([size]), .bootstrap .bootstrap-formselect.is-valid:not([multiple])[size="1"] {
   --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") !important;
   padding-right: 4.125rem !important;
   background-position: right 0.75rem center, center right 2.25rem !important;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
 }
-.was-validated .bootstrap .form-select:valid:focus, .bootstrap .form-select.is-valid:focus {
+.was-validated .bootstrap .bootstrap-formselect:valid:focus, .bootstrap .bootstrap-formselect.is-valid:focus {
   border-color: var(--bs-success) !important;
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25) !important;
 }
-.was-validated .bootstrap .form-control-color:valid, .bootstrap .form-control-color.is-valid {
+.was-validated .bootstrap .bootstrap-form-control-color:valid, .bootstrap .bootstrap-form-control-color.is-valid {
   width: calc(3rem + calc(1.5em + 0.75rem)) !important;
 }
-.was-validated .bootstrap .form-check-input:valid, .bootstrap .form-check-input.is-valid {
+.was-validated .bootstrap .bootstrap-formcheck-input:valid, .bootstrap .bootstrap-formcheck-input.is-valid {
   border-color: var(--bs-success) !important;
 }
-.was-validated .bootstrap .form-check-input:valid:checked, .bootstrap .form-check-input.is-valid:checked {
+.was-validated .bootstrap .bootstrap-formcheck-input:valid:checked, .bootstrap .bootstrap-formcheck-input.is-valid:checked {
   background-color: var(--bs-success-text) !important;
 }
-.was-validated .bootstrap .form-check-input:valid:focus, .bootstrap .form-check-input.is-valid:focus {
+.was-validated .bootstrap .bootstrap-formcheck-input:valid:focus, .bootstrap .bootstrap-formcheck-input.is-valid:focus {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25) !important;
 }
-.was-validated .bootstrap .form-check-input:valid ~ .form-check-label, .bootstrap .form-check-input.is-valid ~ .form-check-label {
+.was-validated .bootstrap .bootstrap-formcheck-input:valid ~ .bootstrap-formcheck-label, .bootstrap .bootstrap-formcheck-input.is-valid ~ .bootstrap-formcheck-label {
   color: var(--bs-success-text) !important;
 }
-.bootstrap-form-check-inline .form-check-input ~ .valid-feedback {
+.bootstrap-form-check-inline .bootstrap-formcheck-input ~ .valid-feedback {
   margin-left: 0.5em !important;
 }
-.was-validated .bootstrap .input-group > .form-control:not(:focus):valid, .bootstrap .input-group > .form-control:not(:focus).is-valid,
-.was-validated .bootstrap .input-group > .form-select:not(:focus):valid,
-.bootstrap-input-group > .form-select:not(:focus).is-valid,
-.was-validated .bootstrap .input-group > .form-floating:not(:focus-within):valid,
-.bootstrap-input-group > .form-floating:not(:focus-within).is-valid {
+.was-validated .bootstrap .input-group > .bootstrap-form-control:not(:focus):valid, .bootstrap .input-group > .bootstrap-form-control:not(:focus).is-valid,
+.was-validated .bootstrap .input-group > .bootstrap-formselect:not(:focus):valid,
+.bootstrap-input-group > .bootstrap-formselect:not(:focus).is-valid,
+.was-validated .bootstrap .input-group > .bootstrap-form-floating:not(:focus-within):valid,
+.bootstrap-input-group > .bootstrap-form-floating:not(:focus-within).is-valid {
   z-index: 3 !important;
 }
 .bootstrap-invalid-feedback {
@@ -2699,7 +2699,7 @@ a > .bootstrap code {
 .bootstrap.is-invalid ~ .invalid-tooltip {
   display: block !important;
 }
-.was-validated .bootstrap .form-control:invalid, .bootstrap .form-control.is-invalid {
+.was-validated .bootstrap .bootstrap-form-control:invalid, .bootstrap .bootstrap-form-control.is-invalid {
   border-color: var(--bs-danger) !important;
   padding-right: calc(1.5em + 0.75rem) !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") !important;
@@ -2707,50 +2707,50 @@ a > .bootstrap code {
   background-position: right calc(0.375em + 0.1875rem) center !important;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
 }
-.was-validated .bootstrap .form-control:invalid:focus, .bootstrap .form-control.is-invalid:focus {
+.was-validated .bootstrap .bootstrap-form-control:invalid:focus, .bootstrap .bootstrap-form-control.is-invalid:focus {
   border-color: var(--bs-danger) !important;
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
 }
-.was-validated .bootstrap textarea.form-control:invalid, .bootstrap textarea.form-control.is-invalid {
+.was-validated .bootstrap textarea.bootstrap-form-control:invalid, .bootstrap textarea.bootstrap-form-control.is-invalid {
   padding-right: calc(1.5em + 0.75rem) !important;
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem) !important;
 }
-.was-validated .bootstrap .form-select:invalid, .bootstrap .form-select.is-invalid {
+.was-validated .bootstrap .bootstrap-formselect:invalid, .bootstrap .bootstrap-formselect.is-invalid {
   border-color: var(--bs-danger) !important;
 }
-.was-validated .bootstrap .form-select:invalid:not([multiple]):not([size]), .was-validated .bootstrap .form-select:invalid:not([multiple])[size="1"], .bootstrap .form-select.is-invalid:not([multiple]):not([size]), .bootstrap .form-select.is-invalid:not([multiple])[size="1"] {
+.was-validated .bootstrap .bootstrap-formselect:invalid:not([multiple]):not([size]), .was-validated .bootstrap .bootstrap-formselect:invalid:not([multiple])[size="1"], .bootstrap .bootstrap-formselect.is-invalid:not([multiple]):not([size]), .bootstrap .bootstrap-formselect.is-invalid:not([multiple])[size="1"] {
   --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") !important;
   padding-right: 4.125rem !important;
   background-position: right 0.75rem center, center right 2.25rem !important;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
 }
-.was-validated .bootstrap .form-select:invalid:focus, .bootstrap .form-select.is-invalid:focus {
+.was-validated .bootstrap .bootstrap-formselect:invalid:focus, .bootstrap .bootstrap-formselect.is-invalid:focus {
   border-color: var(--bs-danger) !important;
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
 }
-.was-validated .bootstrap .form-control-color:invalid, .bootstrap .form-control-color.is-invalid {
+.was-validated .bootstrap .bootstrap-form-control-color:invalid, .bootstrap .bootstrap-form-control-color.is-invalid {
   width: calc(3rem + calc(1.5em + 0.75rem)) !important;
 }
-.was-validated .bootstrap .form-check-input:invalid, .bootstrap .form-check-input.is-invalid {
+.was-validated .bootstrap .bootstrap-formcheck-input:invalid, .bootstrap .bootstrap-formcheck-input.is-invalid {
   border-color: var(--bs-danger) !important;
 }
-.was-validated .bootstrap .form-check-input:invalid:checked, .bootstrap .form-check-input.is-invalid:checked {
+.was-validated .bootstrap .bootstrap-formcheck-input:invalid:checked, .bootstrap .bootstrap-formcheck-input.is-invalid:checked {
   background-color: var(--bs-danger-text) !important;
 }
-.was-validated .bootstrap .form-check-input:invalid:focus, .bootstrap .form-check-input.is-invalid:focus {
+.was-validated .bootstrap .bootstrap-formcheck-input:invalid:focus, .bootstrap .bootstrap-formcheck-input.is-invalid:focus {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
 }
-.was-validated .bootstrap .form-check-input:invalid ~ .form-check-label, .bootstrap .form-check-input.is-invalid ~ .form-check-label {
+.was-validated .bootstrap .bootstrap-formcheck-input:invalid ~ .bootstrap-formcheck-label, .bootstrap .bootstrap-formcheck-input.is-invalid ~ .bootstrap-formcheck-label {
   color: var(--bs-danger-text) !important;
 }
-.bootstrap-form-check-inline .form-check-input ~ .invalid-feedback {
+.bootstrap-form-check-inline .bootstrap-formcheck-input ~ .invalid-feedback {
   margin-left: 0.5em !important;
 }
-.was-validated .bootstrap .input-group > .form-control:not(:focus):invalid, .bootstrap .input-group > .form-control:not(:focus).is-invalid,
-.was-validated .bootstrap .input-group > .form-select:not(:focus):invalid,
-.bootstrap-input-group > .form-select:not(:focus).is-invalid,
-.was-validated .bootstrap .input-group > .form-floating:not(:focus-within):invalid,
-.bootstrap-input-group > .form-floating:not(:focus-within).is-invalid {
+.was-validated .bootstrap .input-group > .bootstrap-form-control:not(:focus):invalid, .bootstrap .input-group > .bootstrap-form-control:not(:focus).is-invalid,
+.was-validated .bootstrap .input-group > .bootstrap-formselect:not(:focus):invalid,
+.bootstrap-input-group > .bootstrap-formselect:not(:focus).is-invalid,
+.was-validated .bootstrap .input-group > .bootstrap-form-floating:not(:focus-within):invalid,
+.bootstrap-input-group > .bootstrap-form-floating:not(:focus-within).is-invalid {
   z-index: 4 !important;
 }
 .bootstrap-btn {
@@ -2789,7 +2789,7 @@ a > .bootstrap code {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .bootstrap .btn {
+  .bootstrap .bootstrap-btn {
     transition: none !important;
   }
 }
@@ -2798,7 +2798,7 @@ a > .bootstrap code {
   background-color: var(--bs-btn-hover-bg) !important;
   border-color: var(--bs-btn-hover-border-color) !important;
 }
-.btn-check + .bootstrap .btn:hover {
+.bootstrap-btn-check + .bootstrap .bootstrap-btn:hover {
   color: var(--bs-btn-color) !important;
   background-color: var(--bs-btn-bg) !important;
   border-color: var(--bs-btn-border-color) !important;
@@ -2810,20 +2810,20 @@ a > .bootstrap code {
   outline: 0 !important;
   box-shadow: var(--bs-btn-focus-box-shadow) !important;
 }
-.btn-check:focus-visible + .bootstrap .btn {
+.bootstrap-btn-check:focus-visible + .bootstrap .bootstrap-btn {
   border-color: var(--bs-btn-hover-border-color) !important;
   outline: 0 !important;
   box-shadow: var(--bs-btn-focus-box-shadow) !important;
 }
-.btn-check:checked + .bootstrap .btn, :not(.btn-check) + .bootstrap .btn:active, .bootstrap .btn:first-child:active, .bootstrap .btn.active, .bootstrap .btn.show {
+.bootstrap-btn-check:checked + .bootstrap .bootstrap-btn, :not(.bootstrap-btn-check) + .bootstrap .bootstrap-btn:active, .bootstrap .bootstrap-btn:first-child:active, .bootstrap .bootstrap-btn.active, .bootstrap .bootstrap-btn.show {
   color: var(--bs-btn-active-color) !important;
   background-color: var(--bs-btn-active-bg) !important;
   border-color: var(--bs-btn-active-border-color) !important;
 }
-.btn-check:checked + .bootstrap .btn:focus-visible, :not(.btn-check) + .bootstrap .btn:active:focus-visible, .bootstrap .btn:first-child:active:focus-visible, .bootstrap .btn.active:focus-visible, .bootstrap .btn.show:focus-visible {
+.bootstrap-btn-check:checked + .bootstrap .bootstrap-btn:focus-visible, :not(.bootstrap-btn-check) + .bootstrap .bootstrap-btn:active:focus-visible, .bootstrap .bootstrap-btn:first-child:active:focus-visible, .bootstrap .bootstrap-btn.active:focus-visible, .bootstrap .bootstrap-btn.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow) !important;
 }
-.bootstrap-btn:disabled, .bootstrap .btn.disabled, fieldset:disabled .bootstrap .btn {
+.bootstrap-btn:disabled, .bootstrap .bootstrap-btn.disabled, fieldset:disabled .bootstrap .bootstrap-btn {
   color: var(--bs-btn-disabled-color) !important;
   pointer-events: none !important;
   background-color: var(--bs-btn-disabled-bg) !important;
@@ -3107,13 +3107,13 @@ a > .bootstrap code {
 .bootstrap-btn-link:hover {
   color: var(--bs-btn-hover-color) !important;
 }
-.bootstrap-btn-lg, .bootstrap .btn-group-lg > .btn {
+.bootstrap-btn-lg, .bootstrap .bootstrap-btn-group-lg > .bootstrap-btn {
   --bs-btn-padding-y: 0.5rem !important;
   --bs-btn-padding-x: 1rem !important;
   --bs-btn-font-size: 1.25rem !important;
   --bs-btn-border-radius: 0.5rem !important;
 }
-.bootstrap-btn-sm, .bootstrap .btn-group-sm > .btn {
+.bootstrap-btn-sm, .bootstrap .bootstrap-btn-group-sm > .bootstrap-btn {
   --bs-btn-padding-y: 0.25rem !important;
   --bs-btn-padding-x: 0.5rem !important;
   --bs-btn-font-size: 0.875rem !important;
@@ -3462,23 +3462,23 @@ a > .bootstrap code {
   display: inline-flex !important;
   vertical-align: middle !important;
 }
-.bootstrap-btn-group > .btn,
-.bootstrap-btn-group-vertical > .btn {
+.bootstrap-btn-group > .bootstrap-btn,
+.bootstrap-btn-group-vertical > .bootstrap-btn {
   position: relative !important;
   flex: 1 1 auto !important;
 }
-.bootstrap-btn-group > .btn-check:checked + .btn,
-.bootstrap-btn-group > .btn-check:focus + .btn,
-.bootstrap-btn-group > .btn:hover,
-.bootstrap-btn-group > .btn:focus,
-.bootstrap-btn-group > .btn:active,
-.bootstrap-btn-group > .btn.active,
-.bootstrap-btn-group-vertical > .btn-check:checked + .btn,
-.bootstrap-btn-group-vertical > .btn-check:focus + .btn,
-.bootstrap-btn-group-vertical > .btn:hover,
-.bootstrap-btn-group-vertical > .btn:focus,
-.bootstrap-btn-group-vertical > .btn:active,
-.bootstrap-btn-group-vertical > .btn.active {
+.bootstrap-btn-group > .bootstrap-btn-check:checked + .bootstrap-btn,
+.bootstrap-btn-group > .bootstrap-btn-check:focus + .bootstrap-btn,
+.bootstrap-btn-group > .bootstrap-btn:hover,
+.bootstrap-btn-group > .bootstrap-btn:focus,
+.bootstrap-btn-group > .bootstrap-btn:active,
+.bootstrap-btn-group > .bootstrap-btn.active,
+.bootstrap-btn-group-vertical > .bootstrap-btn-check:checked + .bootstrap-btn,
+.bootstrap-btn-group-vertical > .bootstrap-btn-check:focus + .bootstrap-btn,
+.bootstrap-btn-group-vertical > .bootstrap-btn:hover,
+.bootstrap-btn-group-vertical > .bootstrap-btn:focus,
+.bootstrap-btn-group-vertical > .bootstrap-btn:active,
+.bootstrap-btn-group-vertical > .bootstrap-btn.active {
   z-index: 1 !important;
 }
 .bootstrap-btn-toolbar {
@@ -3492,19 +3492,19 @@ a > .bootstrap code {
 .bootstrap-btn-group {
   border-radius: 0.375rem !important;
 }
-.bootstrap-btn-group > :not(.btn-check:first-child) + .btn,
-.bootstrap-btn-group > .btn-group:not(:first-child) {
+.bootstrap-btn-group > :not(.bootstrap-btn-check:first-child) + .bootstrap-btn,
+.bootstrap-btn-group > .bootstrap-btn-group:not(:first-child) {
   margin-left: calc(var(--bs-border-width) * -1) !important;
 }
-.bootstrap-btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.bootstrap-btn-group > .btn.dropdown-toggle-split:first-child,
-.bootstrap-btn-group > .btn-group:not(:last-child) > .btn {
+.bootstrap-btn-group > .bootstrap-btn:not(:last-child):not(.dropdown-toggle),
+.bootstrap-btn-group > .bootstrap-btn.dropdown-toggle-split:first-child,
+.bootstrap-btn-group > .bootstrap-btn-group:not(:last-child) > .bootstrap-btn {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
-.bootstrap-btn-group > .btn:nth-child(n+3),
-.bootstrap-btn-group > :not(.btn-check) + .btn,
-.bootstrap-btn-group > .btn-group:not(:first-child) > .btn {
+.bootstrap-btn-group > .bootstrap-btn:nth-child(n+3),
+.bootstrap-btn-group > :not(.bootstrap-btn-check) + .bootstrap-btn,
+.bootstrap-btn-group > .bootstrap-btn-group:not(:first-child) > .bootstrap-btn {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
@@ -3518,11 +3518,11 @@ a > .bootstrap code {
 .dropstart .bootstrap .dropdown-toggle-split::before {
   margin-right: 0 !important;
 }
-.bootstrap-btn-sm + .dropdown-toggle-split, .bootstrap .btn-group-sm > .btn + .dropdown-toggle-split {
+.bootstrap-btn-sm + .dropdown-toggle-split, .bootstrap .bootstrap-btn-group-sm > .bootstrap-btn + .dropdown-toggle-split {
   padding-right: 0.375rem !important;
   padding-left: 0.375rem !important;
 }
-.bootstrap-btn-lg + .dropdown-toggle-split, .bootstrap .btn-group-lg > .btn + .dropdown-toggle-split {
+.bootstrap-btn-lg + .dropdown-toggle-split, .bootstrap .bootstrap-btn-group-lg > .bootstrap-btn + .dropdown-toggle-split {
   padding-right: 0.75rem !important;
   padding-left: 0.75rem !important;
 }
@@ -3531,21 +3531,21 @@ a > .bootstrap code {
   align-items: flex-start !important;
   justify-content: center !important;
 }
-.bootstrap-btn-group-vertical > .btn,
-.bootstrap-btn-group-vertical > .btn-group {
+.bootstrap-btn-group-vertical > .bootstrap-btn,
+.bootstrap-btn-group-vertical > .bootstrap-btn-group {
   width: 100% !important;
 }
-.bootstrap-btn-group-vertical > .btn:not(:first-child),
-.bootstrap-btn-group-vertical > .btn-group:not(:first-child) {
+.bootstrap-btn-group-vertical > .bootstrap-btn:not(:first-child),
+.bootstrap-btn-group-vertical > .bootstrap-btn-group:not(:first-child) {
   margin-top: calc(var(--bs-border-width) * -1) !important;
 }
-.bootstrap-btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.bootstrap-btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.bootstrap-btn-group-vertical > .bootstrap-btn:not(:last-child):not(.dropdown-toggle),
+.bootstrap-btn-group-vertical > .bootstrap-btn-group:not(:last-child) > .bootstrap-btn {
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
-.bootstrap-btn-group-vertical > .btn ~ .btn,
-.bootstrap-btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.bootstrap-btn-group-vertical > .bootstrap-btn ~ .bootstrap-btn,
+.bootstrap-btn-group-vertical > .bootstrap-btn-group:not(:first-child) > .bootstrap-btn {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
@@ -4533,7 +4533,7 @@ a > .bootstrap code {
 .bootstrap-badge:empty {
   display: none !important;
 }
-.bootstrap-badge, .bootstrap .btn .badge {
+.bootstrap-badge, .bootstrap .bootstrap-btn .badge {
   position: relative !important;
   top: -1px !important;
 }
@@ -4565,7 +4565,7 @@ a > .bootstrap code {
 .bootstrap-alert-dismissible {
   padding-right: 3rem !important;
 }
-.bootstrap-alert-dismissible .btn-close {
+.bootstrap-alert-dismissible .bootstrap-btn-close {
   position: absolute !important;
   top: 0 !important;
   right: 0 !important;
@@ -5050,7 +5050,7 @@ a > .bootstrap code {
   box-shadow: var(--bs-btn-close-focus-shadow) !important;
   opacity: var(--bs-btn-close-focus-opacity) !important;
 }
-.bootstrap-btn-close:disabled, .bootstrap .btn-close.disabled {
+.bootstrap-btn-close:disabled, .bootstrap .bootstrap-btn-close.disabled {
   pointer-events: none !important;
   -webkit-user-select: none !important;
   -moz-user-select: none !important;
@@ -5060,7 +5060,7 @@ a > .bootstrap code {
 .bootstrap-btn-close-white {
   filter: var(--bs-btn-close-white-filter) !important;
 }
-.bootstrap [data-bs-theme=dark] .btn-close {
+.bootstrap [data-bs-theme=dark] .bootstrap-btn-close {
   filter: var(--bs-btn-close-white-filter) !important;
 }
 .bootstrap-toast {
@@ -5120,7 +5120,7 @@ a > .bootstrap code {
   border-top-left-radius: calc(var(--bs-toast-border-radius) - var(--bs-toast-border-width)) !important;
   border-top-right-radius: calc(var(--bs-toast-border-radius) - var(--bs-toast-border-width)) !important;
 }
-.bootstrap-toast-header .btn-close {
+.bootstrap-toast-header .bootstrap-btn-close {
   margin-right: calc(-0.5 * var(--bs-toast-padding-x)) !important;
   margin-left: var(--bs-toast-padding-x) !important;
 }
@@ -5238,7 +5238,7 @@ a > .bootstrap code {
   border-top-left-radius: var(--bs-modal-inner-border-radius) !important;
   border-top-right-radius: var(--bs-modal-inner-border-radius) !important;
 }
-.bootstrap-modal-header .btn-close {
+.bootstrap-modal-header .bootstrap-btn-close {
   padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5) !important;
   margin: calc(-0.5 * var(--bs-modal-header-padding-y)) calc(-0.5 * var(--bs-modal-header-padding-x)) calc(-0.5 * var(--bs-modal-header-padding-y)) auto !important;
 }
@@ -6420,7 +6420,7 @@ a > .bootstrap code {
   justify-content: space-between !important;
   padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x) !important;
 }
-.bootstrap-offcanvas-header .btn-close {
+.bootstrap-offcanvas-header .bootstrap-btn-close {
   padding: calc(var(--bs-offcanvas-padding-y) * 0.5) calc(var(--bs-offcanvas-padding-x) * 0.5) !important;
   margin-top: calc(-0.5 * var(--bs-offcanvas-padding-y)) !important;
   margin-right: calc(-0.5 * var(--bs-offcanvas-padding-x)) !important;
@@ -6443,7 +6443,7 @@ a > .bootstrap code {
   background-color: currentcolor !important;
   opacity: 0.5 !important;
 }
-.bootstrap-placeholder.btn::before {
+.bootstrap-placeholder.bootstrap-btn::before {
   display: inline-block !important;
   content: "" !important;
 }
