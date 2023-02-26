@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="hello.css" rel="stylesheet" type="text/css">
-    <link href="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="hello.js"></script>
+    <link href="hello.css" rel="stylesheet" type="text/css" />
+    <link
+      href="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- <script src="dist/js/bootstrap.bundle.min.js"></script> -->
     <title>SenderCheck</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login mt-4">
-        <form
-          onSubmit="">
-          <!-- {(e) => { sendCredentials(e, setErrorMessage, navigate);          }}"" -->
-        
-          <!-- <img class="mb-4" src="" alt="" /> -->
-          <h1 class="h3 mb-3 fw-normal">Login</h1>
-          <div class="mb-4 text-danger"><!--{errorMessage} --></div>
-          <div class="form-floating mb-3">
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-              name="user_email"
-              required
-            />
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-4 flex-grow:3">
-            <input
-              type="password"
-              class="form-control"
-              id="floatingPassword"
-              placeholder="Password"
-              name="password"
-              minLength="8"
-              required
-            />
-            <label for="floatingPassword">Password</label>
-          </div>
-          <div class="mb-4">
-            New user? <a href="http:/localhost:3000/sign_up" target="_blank">Create an account</a>
-          </div>
-          <button type="submit" class="btn btn-lg btn-primary mb-3">
-            Sign in
-          </button>
-        </form>
-      </div>  
-</body>
+      <form>
+        <!-- {(e) => { sendCredentials(e, setErrorMessage, navigate);          }}"" -->
+
+        <!-- <img class="mb-4" src="" alt="" /> -->
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        <div class="mb-4 text-danger" id="errorMessage">
+          <!--{errorMessage} -->
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            name="user_email"
+            required
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-4 flex-grow:3">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            name="password"
+            minlength="8"
+            required
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="mb-4">
+          New user?
+          <a href="http:/localhost:3000/sign_up" target="_blank"
+            >Create an account</a
+          >
+        </div>
+        <button type="submit" class="btn btn-lg btn-primary mb-3">
+          Sign in
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
