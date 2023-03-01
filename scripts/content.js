@@ -40,8 +40,3 @@ function createObserver(class_name, func) {
     }
   });
 }
-
-function printHi(e) {
-  e.preventDefault();
-  console.log("hi");
-}

@@ -67,6 +67,8 @@ function sendCredentials(event) {
         chrome.storage.local.get(["sc_authenticated"]).then((result) => {
           console.log("Value currently is " + result.sc_authenticated);
         });
+
+        window.location.replace("./lists.html");
       }
     })
     .catch((error) => console.log("error", error));
