@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   chrome.storage.local.get(["sc_email"]).then((result) => {
     let sc_email;
-    sc_email = result;
+    sc_email = result.sc_email;
     chrome.storage.local.get(["sc_list_owner"]).then((result) => {
       let list_owner;
       list_owner = result.sc_list_owner;
@@ -110,6 +110,7 @@ function addToList(listOwners) {
         button.className =
           "list-group-item list-group-item-action " +
           (list_owner === e ? "active" : "");
+        button.type = "button";
         button.ariaCurrent = "true";
         button.setAttribute("data-bs-toggle", "list");
         button.key = e;
