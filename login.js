@@ -49,25 +49,6 @@ function sendCredentials(event) {
         chrome.storage.local.set({ sc_ref_token: result.refresh_token });
         chrome.storage.local.set({ sc_authenticated: true });
 
-        chrome.storage.local.get(["sc_user"]).then((result) => {
-          console.log("Value currently is " + result.sc_user);
-        });
-        chrome.storage.local.get(["sc_email"]).then((result) => {
-          console.log("Value currently is " + result.sc_email);
-        });
-        chrome.storage.local.get(["sc_list_owner"]).then((result) => {
-          console.log("Value currently is " + result.sc_list_owner);
-        }); //user requests their own lists by default
-        chrome.storage.local.get(["sc_acc_token"]).then((result) => {
-          console.log("Value currently is " + result.sc_acc_token);
-        });
-        chrome.storage.local.get(["sc_ref_token"]).then((result) => {
-          console.log("Value currently is " + result.sc_ref_token);
-        });
-        chrome.storage.local.get(["sc_authenticated"]).then((result) => {
-          console.log("Value currently is " + result.sc_authenticated);
-        });
-
         window.location.replace("./lists.html");
       }
     })
