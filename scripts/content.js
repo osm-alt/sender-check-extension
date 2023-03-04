@@ -87,6 +87,10 @@ function showBadge(message) {
   } else if (message == "Untrusted") {
     status_badge.innerText = "SenderCheck Status: Untrusted";
     status_badge.className += "bootstrap-text-bg-danger";
+  } else if (message == "Found sender with that name but not same email") {
+    status_badge.innerText =
+      "SenderCheck Status: Found sender with that name but not same email";
+    status_badge.className += "bootstrap-text-bg-danger";
   } else if (message == "Unknown") {
     status_badge.innerText = "SenderCheck Status: Unknown";
     status_badge.className += "bootstrap-text-bg-secondary";
