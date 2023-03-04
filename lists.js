@@ -65,10 +65,10 @@ function requestAccessibleLists() {
   });
 }
 const requestNewToken = async (callback) => {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
   chrome.storage.local.get(["sc_ref_token"]).then(async (result) => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
     let refresh_token;
 
     refresh_token = result.sc_ref_token;
@@ -93,7 +93,7 @@ const requestNewToken = async (callback) => {
       })
       .then((result) => {
         if (result) {
-          chrome.storage.local.set({ sc_acc_token: result.sc_acc_token });
+          chrome.storage.local.set({ sc_acc_token: result.access_token });
           callback();
         }
       })

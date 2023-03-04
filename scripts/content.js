@@ -57,7 +57,7 @@ function checkSender(sender_name, sender_email) {
             console.clear();
             return null;
           } else if (response.status === 403) {
-            requestNewToken(getPermittedUsers, [setPermittedUsers]);
+            requestNewToken(checkSender, sender_name, sender_email);
           } else if (response.ok) {
             return response.json();
           } else if (response.status === 404) {
@@ -100,3 +100,40 @@ function showBadge(message) {
     subtree: true,
   });
 }
+
+const requestNewToken = async (callback, sender_name, sender_email) => {
+  chrome.storage.local.get(["sc_ref_token"]).then(async (result) => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let refresh_token;
+
+    refresh_token = result.sc_ref_token;
+    var raw = JSON.stringify({
+      refresh_token: refresh_token,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    await fetch("http://localhost:4000/token", requestOptions)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return null;
+        }
+      })
+      .then((result) => {
+        if (result) {
+          chrome.storage.local.set({ sc_acc_token: result.access_token });
+          callback(sender_name, sender_email);
+        }
+      })
+      .catch((error) => console.log("error", error));
+  });
+};
