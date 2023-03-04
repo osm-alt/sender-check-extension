@@ -75,6 +75,12 @@ function sendCredentials(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  chrome.storage.local.get(["sc_authenticated"]).then((result) => {
+    if (result.sc_authenticated === true) {
+      window.location.replace("./lists.html");
+    }
+  });
+
   var form = document.querySelector("form");
 
   form.addEventListener("submit", (e) => {

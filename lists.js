@@ -12,6 +12,10 @@ const choose_list_owner = (key) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   requestAccessibleLists();
+  let sign_out_button = document.querySelector("#sign_out");
+
+  sign_out_button.addEventListener("click", sign_out);
+
   let first_button = document.querySelector("#first-button");
 
   chrome.storage.local.get(["sc_email"]).then((result) => {
@@ -131,5 +135,32 @@ function addToList(listOwners) {
         list_elements.appendChild(button);
       });
     }
+  });
+}
+
+function sign_out() {
+  chrome.storage.local.get(["sc_ref_token"]).then((result) => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      refresh_token: result.sc_ref_token,
+    });
+
+    var requestOptions = {
+      method: "DELETE",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:4000/logout", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+
+    chrome.storage.local.clear();
+
+    window.location.replace("./login.html");
   });
 }
