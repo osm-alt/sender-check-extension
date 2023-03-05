@@ -26,7 +26,8 @@
                 "scripts/content.js"
             ],
             "matches": [
-                "https://outlook.live.com/*"
+                "https://outlook.live.com/*",
+                "https://outlook.office365.com/*"
             ]
         }
     ],

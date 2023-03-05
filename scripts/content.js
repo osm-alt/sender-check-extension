@@ -1,6 +1,9 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   // listen for messages sent from background.js
-  if (request.url.startsWith("https://outlook.live.com/mail/0/inbox/id/")) {
+  if (
+    request.url.startsWith("https://outlook.live.com/mail/0/inbox/id/") ||
+    request.url.startsWith("https://outlook.office365.com/mail/inbox/id/")
+  ) {
     outlook();
   }
 });
