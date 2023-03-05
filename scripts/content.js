@@ -27,9 +27,6 @@ function gmail() {
   var sender_email = children[2].childNodes;
   sender_email = sender_email[1].textContent;
 
-  console.log(sender_name);
-  console.log(sender_email);
-
   checkSender(sender_name, sender_email, "gmail");
 }
 
