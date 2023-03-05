@@ -5,6 +5,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     request.url.startsWith("https://outlook.office365.com/mail/inbox/id/")
   ) {
     outlook();
+  } else if (
+    request.url.startsWith("https://mail.google.com/mail/u/0/#inbox/")
+  ) {
+    gmail();
   }
 });
 
@@ -16,11 +20,24 @@ function outlook() {
   });
 }
 
+function gmail() {
+  let sender_box = document.getElementsByClassName("qu")[0];
+  var children = sender_box.childNodes;
+  var sender_name = children[0].firstChild.textContent;
+  var sender_email = children[2].childNodes;
+  sender_email = sender_email[1].textContent;
+
+  console.log(sender_name);
+  console.log(sender_email);
+
+  checkSender(sender_name, sender_email, "gmail");
+}
+
 function handle_outlook(sender_box) {
   var children = sender_box.childNodes;
   var sender_name = children[0].textContent;
   var sender_email = children[1].textContent.slice(2, -1);
-  checkSender(sender_name, sender_email);
+  checkSender(sender_name, sender_email, "outlook");
 }
 
 //this is done to automatically run code when a specific element appears in the DOM
@@ -34,7 +51,7 @@ function createObserver(class_name, func) {
   });
 }
 
-function checkSender(sender_name, sender_email) {
+function checkSender(sender_name, sender_email, platform) {
   chrome.storage.local.get(["sc_list_owner"]).then((result1) => {
     chrome.storage.local.get(["sc_acc_token"]).then((result) => {
       var myHeaders = new Headers();
@@ -60,7 +77,7 @@ function checkSender(sender_name, sender_email) {
             console.clear();
             return null;
           } else if (response.status === 403) {
-            requestNewToken(checkSender, sender_name, sender_email);
+            requestNewToken(checkSender, sender_name, sender_email, platform);
           } else if (response.ok) {
             return response.json();
           } else if (response.status === 404) {
@@ -71,7 +88,7 @@ function checkSender(sender_name, sender_email) {
         .then((result) => {
           if (result) {
             if (result.message) {
-              showBadge(result.message);
+              showBadge(result.message, platform);
             }
           }
         })
@@ -81,7 +98,7 @@ function checkSender(sender_name, sender_email) {
 }
 
 //show badge as a result of response from backend concerning the sender
-function showBadge(message) {
+function showBadge(message, platform) {
   var status_badge = document.createElement("div");
   status_badge.className = "bootstrap-badge bootstrap-mt-2 ";
   if (message == "Trusted") {
@@ -99,16 +116,30 @@ function showBadge(message) {
     status_badge.className += "bootstrap-text-bg-secondary";
   }
 
-  add_badge = createObserver("AvaBt", (someElement) => {
-    someElement.appendChild(status_badge);
-  });
-  add_badge.observe(document, {
-    childList: true,
-    subtree: true,
-  });
+  if (platform == "outlook") {
+    add_badge = createObserver("AvaBt", (someElement) => {
+      someElement.appendChild(status_badge);
+    });
+    add_badge.observe(document, {
+      childList: true,
+      subtree: true,
+    });
+  } else if (platform == "gmail") {
+    let sender_box = document.getElementsByClassName("cf gJ")[0];
+    let row = document.createElement("tr");
+    let cell = document.createElement("td");
+    cell.appendChild(status_badge);
+    row.appendChild(cell);
+    sender_box.firstChild.appendChild(row);
+  }
 }
 
-const requestNewToken = async (callback, sender_name, sender_email) => {
+const requestNewToken = async (
+  callback,
+  sender_name,
+  sender_email,
+  platform
+) => {
   chrome.storage.local.get(["sc_ref_token"]).then(async (result) => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -138,7 +169,7 @@ const requestNewToken = async (callback, sender_name, sender_email) => {
       .then((result) => {
         if (result) {
           chrome.storage.local.set({ sc_acc_token: result.access_token });
-          callback(sender_name, sender_email);
+          callback(sender_name, sender_email, platform);
         }
       })
       .catch((error) => console.log("error", error));
