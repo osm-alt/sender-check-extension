@@ -97,6 +97,7 @@ function checkSender(sender_name, sender_email, platform) {
 //show badge as a result of response from backend concerning the sender
 function showBadge(message, platform) {
   var status_badge = document.createElement("div");
+  status_badge.id = "SenderCheck badge";
   status_badge.className = "bootstrap-badge bootstrap-mt-2 ";
   if (message == "Trusted") {
     status_badge.innerText = "SenderCheck Status: Trusted";
@@ -115,7 +116,8 @@ function showBadge(message, platform) {
 
   if (platform == "outlook") {
     add_badge = createObserver("AvaBt", (someElement) => {
-      someElement.appendChild(status_badge);
+      if (someElement.lastChild.id !== "SenderCheck Badge")
+        someElement.appendChild(status_badge);
     });
     add_badge.observe(document, {
       childList: true,
@@ -123,11 +125,13 @@ function showBadge(message, platform) {
     });
   } else if (platform == "gmail") {
     let sender_box = document.getElementsByClassName("cf gJ")[0];
-    let row = document.createElement("tr");
-    let cell = document.createElement("td");
-    cell.appendChild(status_badge);
-    row.appendChild(cell);
-    sender_box.firstChild.appendChild(row);
+    if (sender_box.firstChild.lastChild.id !== "SenderCheck Badge") {
+      let row = document.createElement("tr");
+      let cell = document.createElement("td");
+      cell.appendChild(status_badge);
+      row.appendChild(cell);
+      sender_box.firstChild.appendChild(row);
+    }
   }
 }
 
